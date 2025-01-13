@@ -9,7 +9,8 @@ dataset = pd.read_csv(('analog-data.csv'), names = ['time', 'recorded_data'])
 # Seperate recorded data into new columns
 dataset[['Analog','Voltage [V]','Temperature [C]']] = dataset['recorded_data'].str.split(' ', expand=True)
 
-# Clean up the new columns 
+# Clean up the new columns
+#print(dataset['Analog'])
 dataset['Analog'] = dataset['Analog'].str.strip("[',]").astype('float')
 dataset['Voltage [V]'] = dataset['Voltage [V]'].str.strip("[',]").astype('float')
 dataset['Temperature [C]'] = dataset['Temperature [C]'].str.strip("[',]").astype('float')

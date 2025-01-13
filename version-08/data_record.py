@@ -24,9 +24,9 @@ print("Created file")
 
 # Sampling 
 
-time_between_samples = 0.5 # seconds (60 is 5 mins)
+time_between_samples = float(input('Enter seconds between samples: ')) # seconds (60 is 5 mins)
 
-steps = 120
+steps = int(input('Enter length of recording in seconds: '))
 
 sensor_data = [] #store data
 
